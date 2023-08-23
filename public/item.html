@@ -40,7 +40,8 @@
             var tableContent = '';
 
 
-            $.get( 'http://localhost:8080/up', function( data ) {
+            $.get( 'https://groceryapp-tn2h.onrender.com/up', function( data ) {
+                console.log(data);
             //this will split the string into array line by line
             var lineByline = data.split('\n');
             //here we're itraing the array which you've created and printing the values

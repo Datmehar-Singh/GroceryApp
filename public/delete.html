@@ -57,7 +57,7 @@
         var tableContent = '';
 
 
-        $.get( 'http://localhost:8080/up', function( data ) {
+        $.get( 'https://groceryapp-tn2h.onrender.com/up', function( data ) {
         var lineByline = data.split('\n');
         $.each(lineByline, function(index, value) {
             if (index < lineByline.length - 1) {
