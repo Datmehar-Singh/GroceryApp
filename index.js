@@ -8,7 +8,7 @@ const alert = require('alert');
 
 app.use(express.static('static'));
 
-var HTTP_PORT = process.env.PORT || 8080;
+var HTTP_PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 
