@@ -1,0 +1,195 @@
+@media only screen and (min-width:600px){
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #FBEAEB;
+    background-size: cover;
+}
+#body{
+    margin: 20px 150px 20px 150px;
+    text-align: center;
+    color: #2F3C7E;
+    
+}
+#body h1{
+    font-family: 'Black Ops One', cursive;
+    text-shadow: 5px 3px black;
+    font-size: 10vh;
+    margin:30px 10px 30px 10px;
+    margin: 0;
+}
+#inp{
+    font-size: 3vh;
+    margin: 50px;
+    font-weight: bolder;
+}
+#addin{
+    width: 15vw;
+    height: 4vh;
+    /* border-radius: 10px 10px black ; */
+    border: solid;
+}
+#add{
+    height:4vh;
+    width:8vw;
+    border-radius: 10px 10px;
+    background-color: green;
+    color: #FBEAEB;
+    margin:2px;
+}
+#add:hover{
+    background-color: blue;
+    color: white;
+    
+}
+.btns{
+    margin-left: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#del{
+    margin-left: 450px;
+    margin-top: 10px;
+    background-color: rgb(106, 109, 240);
+}
+
+.hme{
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+button{
+    height: 4vh;
+    width: 12vw;
+    border-radius: 8px 8px;
+    margin: 10px;
+    background-color: green;
+    color: #FBEAEB;
+}
+button a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color:green;
+    color:#FBEAEB;
+}
+
+
+.demo{
+    text-align: left;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-top: 80px;
+    
+}
+.demo input{
+    text-align: right;
+    margin-right: 200px;
+}
+h1{
+    margin-left: 350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    color:#2F3C7E;
+    font-family: 'Black Ops One', cursive;
+}
+.items{
+    margin: 10px;
+    text-transform: capitalize;
+    color:#2F3C7E;
+    font-family:  cursive;
+    font-size: 30px;
+    
+
+}
+}
+@media only screen and (max-width:599px){
+*{
+    text-align: center;
+    background-color: #FBEAEB;
+    background-size: cover;
+}
+#body{
+    color: #2F3C7E;
+}
+#body h1{
+    font-family: 'Black Ops One', cursive;
+    text-shadow: 1px 1px black;
+    font-size: 5vh;
+}
+#inp{
+    margin: 20px;
+    font-weight: bolder;
+    font-size: 5vh;
+    margin-bottom: 50px;
+    /* width: 80vw; */
+}
+input{
+    text-align: center;
+    border-radius: 8px 8px black;
+    border: solid;
+    height: 7vh;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: block;
+    width: 85vw;
+}
+#add{
+    height:6vh;
+    width:35vw;
+    border-radius: 10px 10px;
+    background-color: green;
+    color: #FBEAEB;
+    margin:2px;
+}
+#add:hover{
+    background-color: blue;
+    color: white;
+    
+}
+button{
+    height:6vh;
+    width:35vw;
+    border-radius: 10px 10px;
+    background-color:#2F3C7E;
+    color: #FBEAEB;
+    margin:10px;
+}
+button a{
+    text-decoration: none;
+    font-size: 10pxpx;
+    font-weight: bold;
+    background-color:#2F3C7E;
+    color:#FBEAEB;
+}
+.demo{
+    text-align: left;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.demo input{
+    text-align: right;
+}
+.items{
+    text-align: left;
+    margin-left: 10px;
+    text-transform: capitalize;
+    color:#2F3C7E;
+    font-family:  cursive;
+    font-size: 15px;
+}
+#chck{
+    text-align: right;
+    height: 25px;
+    width: 25px;
+}
+h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color:#2F3C7E;
+    font-family: 'Black Ops One', cursive;
+}
+}

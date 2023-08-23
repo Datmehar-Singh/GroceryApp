@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/main.css">
+
+</head>
+<body>
+  <div id="body">
+    <h1>801 Grocery App</h1>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <span class="glyphicon glyphicon-cloud-upload"></span>
+                <form action="/up" method="POST">
+                  <div id="inp">
+                    Item Name: <input type="text" id="addin" name="ItemName">
+                  <button class="btn btn-lg up-btn" type="submit" id="add">Add Item</button>
+                </div>
+                </form>
+                <button class="btn btn-lg up-btn" type="submit" id="delete"><a href="/delete">Delete</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <button id="show"><a href="/item" >Show List</a></button>
+  </div>
+</body>
+</html>

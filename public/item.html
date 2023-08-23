@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #demo{
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="itms">
+    <h1>List of Items to be brought</h1>
+    <div class="demo">
+    
+    </div>
+    <div class="btns">
+        <button class="hme" onclick="window.location.href = '/';">HOME</button>
+        <button class="hme" onclick="window.location.href = '/delete';">DELETE</button>
+    </div>
+    
+
+    </div>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+
+
+    <script>
+            $(document).ready(function() {
+                populateTable();
+            });
+
+            function populateTable() {
+            var tableContent = '';
+
+
+            $.get( 'http://localhost:8080/up', function( data ) {
+            //this will split the string into array line by line
+            var lineByline = data.split('\n');
+            //here we're itraing the array which you've created and printing the values
+            $.each(lineByline , function(key,value){
+                tableContent += `<div class="items">${value}</div>`
+            });
+
+            $('.demo').html(tableContent);
+            });
+            };
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <!-- <script src="../static/index.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+        *{
+            background-color:#FBEAEB;
+        }
+        #demo{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Deletion in process</h1>
+    
+    <div class="demo">
+        
+    </div>
+    <button type="button" onclick="loadXMLDoc()" id="del">Confirm Delete</button>
+    <div class="btns">
+        <button class="hme" onclick="window.location.href = '/';">HOME</button>
+        <button class="hme" onclick="window.location.href = '/item';">LIST</button>
+    </div>
+    <script>
+        
+        $(document).ready(function() {
+
+        populateTable();
+
+        });
+        function loadXMLDoc(){
+        let i =0;
+        let delarr = [];
+        $('input[name="Delete"]:checked').each(function() {
+        delarr.push(this.value);
+        });
+        console.log(delarr);
+        $.ajax({
+                type:'POST',
+                url: '/deleteit',
+                data: JSON.stringify(delarr),//it will convert array to string
+            })
+        location.reload();
+        }
+        // module.exports = getValue;
+        function populateTable() {
+        var tableContent = '';
+
+
+        $.get( 'http://localhost:8080/up', function( data ) {
+        var lineByline = data.split('\n');
+        $.each(lineByline, function(index, value) {
+            if (index < lineByline.length - 1) {
+                tableContent += `<div class="items">${value} <input type="checkbox" id="chck" name="Delete" value= ${value}/></div>`;
+            }
+        });
+        $('.demo').html(tableContent);
+
+        });
+        };
+    </script>
+</body>
+</html>
