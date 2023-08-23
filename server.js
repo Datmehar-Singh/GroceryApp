@@ -4,9 +4,11 @@ var path = require("path");
 var bodyParser = require("body-parser");
 const fs = require("fs");
 const alert = require('alert');
+const cors = require('cors');
 
 
 app.use(express.static('static'));
+app.use(cors());
 
 var HTTP_PORT = process.env.PORT || 3000;
 
