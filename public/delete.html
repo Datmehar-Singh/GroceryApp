@@ -47,7 +47,7 @@
         console.log(delarr);
         $.ajax({
                 type:'POST',
-                url: '/deleteit',
+                url: 'https://groceryapp-tn2h.onrender.com/deleteit',
                 data: JSON.stringify(delarr),//it will convert array to string
             })
         location.reload();

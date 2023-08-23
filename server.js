@@ -69,7 +69,7 @@ app.post("/deleteit", (req, res) => {
         });
         newData = newData.join('\n');
         // remove the first line and the 5th and 6th lines in the file
-        fs.writeFile('./data.txt',newData, 'utf8', function(err) {
+        fs.writeFile('data.txt',newData, 'utf8', function(err) {
             if (err) throw err;
             console.log("the lines have been removed.");
         });
