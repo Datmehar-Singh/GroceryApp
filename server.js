@@ -38,7 +38,7 @@ app.get("/up", function(req,res){
     res.sendFile(path.join(__dirname,"/data.txt"));
 
 })
-app.post("/deleteit", (req, res) => {
+app.post("/delete", (req, res) => {
     let data = req.body;
     var result = Object.keys(data)
     var datastring = result.toString();
